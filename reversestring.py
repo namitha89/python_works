@@ -1,22 +1,19 @@
 #!/usr/bin/python
 
-def reversestr(str):
+def reverse_str(string):
+	"""This function reverses the given string in non pythonic way"""
 	rstr = ''
-	strlen = len(str)
+	strlen = len(string)
 	while strlen > 0:
-		rstr += str[strlen-1]
+		rstr += string[strlen-1]
 		strlen = strlen-1
 	return rstr
 
-print(reversestr("namitha hi narendra hi hi"))
+print(reverse_str("Can you reverse me"))
 
 
 
-## the above solution can be easily solved as given below
-
-
-
-
-str = "namitha hi narendra hi hi"
-print(str[::-1])
+# The above solution can be easily solved as given below
+string = "This is an example string"
+print(string[::-1])
 
