@@ -1,23 +1,19 @@
-#!/usr/bin/python
+with open('2city10.txt', 'r') as myfile:
+    data=myfile.read().replace('\n', '')
+    text = data.split(' ')
+    uniquewords = {}
+
+    for i in text:
+
+      if i not in uniquewords:
+        uniquewords[i] = 1
+      else:
+        uniquewords[i] += 1 
+
+    # import pdb;pdb.set_trace()
+    sv = sorted(uniquewords.items(), key=lambda x:x[1], reverse=True)
+    for i in sv[0:10]: print i[0], ': ', i[1]
 
 
-with open('quiz.txt') as f:
-    array = []
-    score = 0
-    for line in f:
-    	array.append(line.rstrip('\n').split(','))
-    	# n = int(raw_input())
-    linelength = len(array)
 
-    for i in range(linelength):
-    	input = array[i][0]
-    	input2 = int(array[i][1])
-    	print input
-    	commandinput = int(raw_input())
-    	if(input2 == commandinput):
-    		score += 1
-
-
-    print "your score is",score
-
-    
+  
