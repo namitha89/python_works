@@ -55,24 +55,7 @@ class LinkedList:
         return False
 
     def find(self,d):
-        this_node =
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        this_node =d
         while this_node:
             if this_node.get_data == d:
                 return d
